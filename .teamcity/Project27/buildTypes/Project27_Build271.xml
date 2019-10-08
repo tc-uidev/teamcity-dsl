@@ -5,7 +5,7 @@
   <settings>
     <parameters />
     <build-runners>
-      <runner id="RUNNER_7" name="" type="simpleRunner">
+      <runner id="RUNNER_7" name="random d2" type="simpleRunner">
         <parameters>
           <param name="script.content"><![CDATA[date
 echo 'my build step stdout'
