@@ -11,7 +11,8 @@
           <param name="script.content"><![CDATA[date
 echo 'my build step stdout'
 echo 'my build step stderr' >&2
-exit `expr $RANDOM % 2`]]></param>
+#exit `expr $RANDOM % 2`
+exit `expr \`date +%N\` % 2`]]></param>
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
         </parameters>
