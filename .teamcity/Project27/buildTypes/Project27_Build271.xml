@@ -7,6 +7,7 @@
     <build-runners>
       <runner id="RUNNER_7" name="random d2" type="simpleRunner">
         <parameters>
+          <param name="log.stderr.as.errors" value="true" />
           <param name="script.content"><![CDATA[date
 echo 'my build step stdout'
 echo 'my build step stderr' 2>&1
