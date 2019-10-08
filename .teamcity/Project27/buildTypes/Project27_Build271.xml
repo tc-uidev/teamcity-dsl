@@ -10,9 +10,8 @@
           <param name="log.stderr.as.errors" value="true" />
           <param name="script.content"><![CDATA[date
 echo 'my build step stdout'
-echo 'my build step stderr' 2>&1
-echo `od -An -N4 -l /dev/random`%2 |bc && exit 1
-exit 0]]></param>
+echo 'my build step stderr' >&2
+exit `expr $RANDOM % 2`]]></param>
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
         </parameters>
