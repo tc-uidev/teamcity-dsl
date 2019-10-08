@@ -4,7 +4,19 @@
   <description />
   <settings>
     <parameters />
-    <build-runners />
+    <build-runners>
+      <runner id="RUNNER_7" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[date
+echo 'my build step stdout'
+echo 'my build step stderr' 2>&1
+echo `od -An -N4 -l /dev/random`%2 |bc && exit 1
+exit 0]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
     <vcs-settings />
     <requirements />
     <build-triggers />
